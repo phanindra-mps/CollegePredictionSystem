@@ -1,0 +1,271 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Prediction Website</title>
+    <style>
+        /* General styling */ 
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        header {
+            background: #4caf50;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        nav a {
+            margin: 0 10px;
+            color: #4caf50;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .form-container {
+            display: none;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            max-width: 500px;
+            margin: auto;
+        }
+        input, textarea, select {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"], button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>College Prediction Website</h1>
+</header>
+
+<nav>
+    <a onclick="showPage('home')">Home</a>
+    <a onclick="navigatePage('register')">Register</a>
+    <a onclick="navigatePage('login')">Login</a>
+    <a onclick="navigatePage('selection')">Selection</a>
+    <a onclick="navigatePage('prediction')">Prediction</a>
+    <a onclick="navigatePage('opinion')">Opinion</a>
+    <a onclick="navigatePage('recommendation')">Course Recommendation</a>
+    <a onclick="showPage('terms')">Terms & Conditions</a>
+    <a onclick="showPage('feedback')">Feedback</a>
+    <a onclick="showPage('contact')">Contact</a>
+</nav>
+
+<!-- Pages -->
+<div id="home" class="form-container" style="display: block;">
+    <h2>Welcome to Our College Prediction Website</h2>
+    <p>Your journey to success starts here!</p>
+</div>
+
+<!-- Register Page -->
+<div id="register" class="form-container">
+    <h2>Register</h2>
+    <form id="registerForm" onsubmit="handleRegister(event)">
+        <input type="text" placeholder="Name" required><br>
+        <input type="email" placeholder="Email" required><br>
+        <input type="password" placeholder="Password" required><br>
+        <input type="submit" value="Register">
+    </form>
+</div>
+
+<!-- Login Page -->
+<div id="login" class="form-container">
+    <h2>Login</h2>
+    <form id="loginForm" onsubmit="handleLogin(event)">
+        <input type="email" placeholder="Email" required><br>
+        <input type="password" placeholder="Password" required><br>
+        <input type="submit" value="Login">
+    </form>
+</div>
+
+<!-- Selection Page -->
+<div id="selection" class="form-container">
+    <h2>Choose Your Preferences</h2>
+    <form onsubmit="handleSelection(event)">
+        <label for="rank">Rank:</label>
+        <input type="text" id="rank" name="rank" placeholder="Enter your rank" required>
+
+        <label for="branch">Branch:</label>
+        <select id="branch" name="branch" required>
+            <option value="engineering">Engineering</option>
+            <option value="medicine">Medicine</option>
+            <option value="commerce">Commerce</option>
+            <option value="arts">Arts</option>
+            <option value="science">Science</option>
+        </select>
+
+        <label for="state">Indian State:</label>
+        <select id="state" name="state" required>
+            <option value="Andhra Pradesh">Andhra Pradesh</option>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Tamil Nadu">Tamil Nadu</option>
+            <option value="Karnataka">Karnataka</option>
+            <option value="Kerala">Kerala</option>
+            <!-- Add more Indian states as needed -->
+        </select>
+
+        <label for="country">Country:</label>
+        <select id="country" name="country" required>
+            <option value="India">India</option>
+            <option value="USA">United States</option>
+            <option value="Canada">Canada</option>
+            <option value="UK">United Kingdom</option>
+            <option value="Australia">Australia</option>
+            <!-- Add more countries as needed -->
+        </select>
+
+        <input type="submit" value="Submit Preferences">
+    </form>
+</div>
+
+<!-- Prediction Page -->
+<div id="prediction" class="form-container">
+    <h2>Prediction Results</h2>
+    <p>Your personalized predictions will appear here.</p>
+
+    <div class="prediction-container">
+        <p>Based on your rank and preferences, here are the recommended colleges:</p>
+        
+        <form action="/select-college" method="post">
+            <label class="college-option">
+                <input type="radio" name="college" value="IIT Bombay" required>
+                <strong>IIT Bombay</strong><br>
+                Location: Maharashtra<br>
+                NIRF Rank: 3
+            </label>
+
+            <label class="college-option">
+                <input type="radio" name="college" value="IISc Bangalore" required>
+                <strong>IISc Bangalore</strong><br>
+                Location: Karnataka<br>
+                NIRF Rank: 1
+            </label>
+
+            <label class="college-option">
+                <input type="radio" name="college" value="IIT Delhi" required>
+                <strong>IIT Delhi</strong><br>
+                Location: Delhi<br>
+                NIRF Rank: 2
+            </label>
+
+            <label class="college-option">
+                <input type="radio" name="college" value="Anna University" required>
+                <strong>Anna University</strong><br>
+                Location: Tamil Nadu<br>
+                NIRF Rank: 9
+            </label>
+
+            <label class="college-option">
+                <input type="radio" name="college" value="Jadavpur University" required>
+                <strong>Jadavpur University</strong><br>
+                Location: West Bengal<br>
+                NIRF Rank: 11
+            </label>
+
+            <input type="submit" value="Confirm Selection">
+        </form>
+    </div>
+</div>
+
+<!-- Opinion Page -->
+<div id="opinion" class="form-container">
+    <h2>Student Opinions</h2>
+    <form onsubmit="handleOpinion(event)">
+        <select id="college" name="college" required>
+            <option value="IIT Bombay">IIT Bombay</option>
+            <!-- Add more college options as needed -->
+        </select>
+        <textarea placeholder="Share your experience..." required></textarea><br>
+        <input type="submit" value="Submit Opinion">
+    </form>
+</div>
+
+<!-- Course Recommendation Page -->
+<div id="recommendation" class="form-container">
+    <h2>Personalized Course Recommendations</h2>
+    <form onsubmit="handleRecommendation(event)">
+        <input type="text" placeholder="Your Name" required><br>
+        <input type="number" placeholder="Age" required><br>
+        <select required>
+            <option>Education Level</option>
+            <option value="highschool">High School</option>
+            <option value="undergraduate">Undergraduate</option>
+            <option value="graduate">Graduate</option>
+            <option value="postgraduate">Postgraduate</option>
+        </select><br>
+        <textarea placeholder="Your Interests" required></textarea><br>
+        <input type="submit" value="Get Recommendations">
+    </form>
+</div>
+
+<!-- Terms & Conditions Page -->
+<div id="terms" class="form-container">
+    <h2>Terms and Conditions</h2>
+    <p>Welcome to our College Prediction Website. By using this website, you agree to the following terms and conditions. Please read them carefully before using the services offered on this site.</p>
+    <h3>1. Acceptance of Terms</h3>
+    <p>By accessing and using this website, you accept and agree to be bound by the terms and provisions of this agreement.</p>
+</div>
+
+<!-- Feedback and Contact Page -->
+<div id="feedback" class="form-container">
+    <h2>Feedback</h2>
+    <form onsubmit="handleFeedback(event)">
+        <textarea placeholder="Your Feedback" required></textarea><br>
+        <input type="submit" value="Submit Feedback">
+    </form>
+</div>
+
+<div id="contact" class="form-container">
+    <h2>Contact Us</h2>
+    <form onsubmit="handleContact(event)">
+        <input type="text" placeholder="Your Name" required><br>
+        <input type="email" placeholder="Your Email" required><br>
+        <textarea placeholder="Your Message" required></textarea><br>
+        <input type="submit" value="Send Message">
+    </form>
+</div>
+
+<script>
+    function navigatePage(page) {
+        // Hide all pages
+        document.querySelectorAll('.form-container').forEach(container => {
+            container.style.display = 'none';
+        });
+        // Show the selected page
+        document.getElementById(page).style.display = 'block';
+    }
+
+    function showPage(page) {
+        navigatePage(page);
+    }
+
+    function handleSelection(event) {
+        event.preventDefault();
+        alert("Preferences submitted! Now proceed to predictions.");
+        navigatePage('prediction'); // Redirect to prediction page after submission
+    }
+
+    // Other form handling functions (handleRegister, handleLogin, etc.) would be defined here...
+</script>
+
+</body>
+</html>
