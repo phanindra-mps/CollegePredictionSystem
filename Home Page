@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - College Prediction Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            background-image: url(CLG.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-align: center;
+        }
+        header {
+            background: #4caf50;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #4caf50;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .logo {
+            max-width: 150px;
+            margin: 20px auto;
+        }
+        .welcome {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to Our College Prediction Website</h1>
+</header>
+
+<img src="logo-placeholder.png" alt="College Logo" class="logo"> <!-- Replace with your logo -->
+
+<div class="welcome">
+    <p>Your journey to success starts here!</p>
+</div>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="login.html">Login</a>
+    <a href="register.html">Register</a>
+    <a href="feedback.html">Feedback</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+</body>
+</html>
