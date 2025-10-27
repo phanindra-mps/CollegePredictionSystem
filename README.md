@@ -47,44 +47,7 @@ These illustrate overall architecture and system workflow.
 
 ---
 
-## 🖥️ Graphical User Interface Screenshots
 
----
-
-### 🏠 Home Page
-![Home Page Screenshot](home.png)
-
----
-
-### 📝 Registration Page
-![Registration Page Screenshot](reg.png)
-
----
-
-### 🔐 Login Page
-![Login Page Screenshot](login.png)
-
----
-
-### 🎯 Selection Page
-![Selection Page Screenshot](selection.png)
-
----
-
-### 📊 Prediction Results Page
-![Prediction Page Screenshot](prediction.png)
-
----
-
-### 💬 Student Opinions Page
-![Student Opinions Screenshot](student_opinions.png)
-
----
-
-### 📨 Feedback Page
-![Feedback Page Screenshot](feedback.png)
-
----
 
 ## 👤 Project Developer
 
