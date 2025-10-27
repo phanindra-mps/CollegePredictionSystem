@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prediction Page</title>
+<style>         body {             font-family: Arial, sans-serif;             margin: 0;             padding: 20px;             background-color: #f4f4f4;             background-image: url(CLG.jpeg);             background-repeat: no-repeat;             background-size: cover;
+}
+.prediction-container {             background: #fff;             padding: 20px;             border-radius: 5px;             box-shadow: 0 2px 5px rgba(0,0,0,0.1);             max-width: 500px;             margin: auto;             max-height: 500px;             overflow-y: auto;
+}
+.college-option {             display: block;             margin: 10px 0;             padding: 10px;             border: 1px solid #ccc;             border-radius: 4px;             text-align: left;             background-color: #e9f5e9;             cursor: pointer;
+}
+input[type="submit"] {             background-color: #4caf50;             color: white;             border: none;             padding: 10px;             border-radius: 4px;             cursor: pointer;             width: 100%;             margin-top: 15px;
+}
+input[type="submit"]:hover {             background-color: #45a049;
+}
+</style>
+</head>
+<body>
+
+<h2>Prediction Results</h2>
+
+<div class="prediction-container">
+<p>Based on your  rank and preferences, here are the recommended colleges:</p>
+
+<form action="/select-college" method="post">
+<label class="college-option">
+<input type="radio" name="college" value="IIT Bombay" required>
+<strong>IIT Bombay</strong><br>
+Location: Maharashtra<br>
+NIRF Rank: 3
+</label>
+
+<label class="college-option">
+<input type="radio" name="college" value="IISc Bangalore" required>
+<strong>IISc Bangalore</strong><br>
+Location: Karnataka<br>
+NIRF Rank: 1
+</label>
+
+<label class="college-option">
+<input type="radio" name="college" value="IIT Delhi" required>
+<strong>IIT Delhi</strong><br>
+Location: Delhi<br>
+NIRF Rank: 2
+</label>
+
+<label class="college-option">
+<input type="radio" name="college" value="Anna University" required>
+<strong>Anna University</strong><br>
+Location: Tamil Nadu<br>
+NIRF Rank: 9
+</label>
+
+<label class="college-option">
+<input type="radio" name="college" value="Jadavpur University" required>
+<strong>Jadavpur University</strong><br>
+Location: West Bengal<br>
+NIRF Rank: 11
+</label>
+
+<label class="college-option">
+<input type="radio" name="college" value="IIT Madras" required>
+<strong>IIT Madras</strong><br>
+Location: Tamil Nadu<br>
+NIRF Rank: 1 (Engineering)
+</label>
+
+<label class="college-option">
+<input type="radio" name="college" value="Amrita Vishwa Vidyapeetham" required>
+<strong>Amrita Vishwa Vidyapeetham</strong><br>
+Location: Kerala<br>
+NIRF Rank: 4
+</label>
+
+<label class="college-option">
+<input type="radio" name="college" value="Manipal Academy of Higher Education" required>
+<strong>Manipal Academy of Higher Education</strong><br>
+Location: Karnataka<br>
+NIRF Rank: 7
+</label>
+
+<label class="college-option">
+<input type="radio" name="college" value="University of Delhi" required>
+<strong>University of Delhi</strong><br>
+Location: Delhi<br>
+NIRF Rank: 13
+</label>
+
+<label class="college-option">
+<input type="radio" name="college" value="Aligarh Muslim University" required>
+<strong>Aligarh Muslim University</strong><br>
+Location: Uttar Pradesh<br>
+NIRF Rank: 17
+</label>
+
+<!-- Add 40 more college options in the same format -->
+<label class="college-option">
+<input type="radio" name="college" value="NIT Tiruchirappalli" required>
+<strong>NIT Tiruchirappalli</strong><br>
+Location: Tamil Nadu<br>
+NIRF Rank: 8
+</label>
+
+<label class="college-option">
+<input type="radio" name="college" value="VIT Vellore" required>
+<strong>VIT Vellore</strong><br>
+Location: Tamil Nadu<br>
+NIRF Rank: 18
+</label>
+
+<label class="college-option">
+<input type="radio" name="college" value="IIT Roorkee" required>
+<strong>IIT Roorkee</strong><br>
+Location: Uttarakhand<br>
+NIRF Rank: 6
+</label>
+
+<label class="college-option">
+<input type="radio" name="college" value="Banaras Hindu University" required>
+<strong>Banaras Hindu University</strong><br>
+Location: Uttar Pradesh<br>
+NIRF Rank: 10
+</label>
+
+<label class="college-option">
+<input type="radio" name="college" value="Jawaharlal Nehru University" required>
+<strong>Jawaharlal Nehru University</strong><br>
+Location: Delhi<br>
+NIRF Rank: 2 (University)
+</label>
+
+<!-- Add more institutions as needed -->
+
+<input type="submit" value="Confirm Selection">
+</form>
+</div>
+
+</body>
+</html>
