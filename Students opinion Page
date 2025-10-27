@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Opinions</title>
+<style>         body {             font-family: Arial, sans-serif;             margin: 0;             padding: 20px;             background-color: #f4f4f4;             background-image: url(CLG.jpeg);             background-repeat: no-repeat;             background-size: cover;
+}
+.opinion-container {             background: #fff;             padding: 20px;             border-radius: 5px;             box-shadow: 0 2px 5px rgba(0,0,0,0.1);             max-width: 600px;             margin: auto;             max-height: 600px;             overflow-y: auto;
+}
+.opinion-form {             margin-bottom: 20px;
+}
+input[type="text"], textarea {             width: 90%;             padding: 10px;             margin: 10px 0;             border: 1px solid #ccc;             border-radius: 4px;
+}
+input[type="submit"] {             background-color: #4caf50;             color: white;             border: none;             padding: 10px;             border-radius: 4px;             cursor: pointer;             width: 100%;
+}
+input[type="submit"]:hover {             background-color: #45a049;
+}
+.opinion-item {             padding: 15px;             border: 1px solid #ddd;             border-radius: 4px;             margin: 10px 0;             background-color: #e9f5e9;
+}
+</style>
+</head>
+<body>
+
+<h2>Student Opinions on Colleges</h2>
+
+<div class="opinion-container">
+
+<!-- Opinion Submission Form -->
+<form action="/submit-opinion" method="post" class="opinion-form">
+<label for="college">College:</label>
+<select id="college" name="college" required>
+<option value="IIT Bombay">IIT Bombay</option>
+<option value="IISc Bangalore">IISc Bangalore</option>
+<option value="IIT Delhi">IIT Delhi</option>
+<option value="Anna University">Anna University</option>
+<option value="Jadavpur University">Jadavpur University</option>
+<option value="IIT Madras">IIT Madras</option>
+<option value="Amrita Vishwa Vidyapeetham">Amrita Vishwa
+Vidyapeetham</option>
+<option value="Manipal Academy of Higher Education">Manipal Academy of
+Higher Education</option>
+<option value="University of Delhi">University of Delhi</option>
+<option value="Aligarh Muslim University">Aligarh Muslim University</option>
+<!-- Add more college options as needed -->
+</select>
+
+<label for="student-name"></label>
+<input type="text" id="student-name" name="student_name" placeholder="Enter your name" required>
+
+<label for="opinion">Opinion:</label>
+<textarea id="opinion" name="opinion" rows="4" placeholder="Share your experience at the college..." required></textarea>
+
+<input type="submit" value="Submit Opinion">
+</form>
+
+<!-- Display Submitted Opinions -->
+<div class="opinion-list">
+<h3>Opinions from Students</h3>
+
+<!-- Example of opinion item; dynamically populated by backend -->
+<div class="opinion-item">
+<strong>College:</strong> IIT Bombay<br>
+<strong>Student:</strong> Rahul S.<br>
+<p>"The campus facilities are outstanding, and the professors are incredibly supportive. The environment pushes you to excel."</p>
+</div>
+
+<div class="opinion-item">
+<strong>College:</strong> Anna University<br>
+<strong>Student:</strong> Priya K.<br>
+<p>"The academic curriculum is rigorous but prepares you well for the industry.
+Infrastructure could be better."</p>
+</div>
+
+<div class="opinion-item">
+<strong>College:</strong> IISc Bangalore<br>
+<strong>Student:</strong> Aman P.<br>
+<p>"One of the best research facilities in India. Amazing opportunities for hands-on research."</p>
+</div>
+
+
+</div>
+
+</div>
+
+</body>
+</html>
